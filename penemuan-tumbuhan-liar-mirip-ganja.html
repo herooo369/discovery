@@ -896,18 +896,22 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
     line-height: 40px;
   }
   div[style*="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px;"] {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 4px;
+    overflow-x: auto;
   }
   .game-card {
-    width: 45%;
-    margin-bottom: 10px;
+    width: calc(33.33% - 4px);
+    min-width: calc(33.33% - 4px);
+    flex-shrink: 0;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 320px) {
   .game-card {
-    width: 100%;
+    width: calc(33.33% - 4px);
+    min-width: calc(33.33% - 4px);
   }
 }
 </style>
