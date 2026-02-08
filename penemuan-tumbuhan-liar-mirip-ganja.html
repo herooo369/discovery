@@ -689,7 +689,6 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   --shine: 0 0 15px rgba(0, 212, 255, 0.6);
   --typography: "Montserrat", sans-serif;
 }
-
 /* ===== STICKY TOP BAR ===== */
 .sticky-top {
   position: fixed;
@@ -708,7 +707,6 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
 .sticky-top a {
   color: #fff;
   text-decoration: none;
@@ -716,19 +714,16 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   font-size: 14px;
   transition: all 0.4s ease-in-out;
 }
-
 .sticky-top a i {
   display: block;
   font-size: 20px;
   margin-bottom: 5px;
 }
-
 .sticky-top a:hover {
   color: var(--highlight);
   text-shadow: 0 0 12px var(--highlight);
   transform: translateY(-3px) scale(1.02);
 }
-
 /* ===== BOTTOM NAV ===== */
 .bottom-nav {
   position: fixed;
@@ -744,7 +739,6 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   box-shadow: var(--shine);
   padding: 8px 0;
 }
-
 .bottom-nav a {
   color: #fff;
   text-decoration: none;
@@ -753,32 +747,27 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   transition: all 0.4s ease-in-out;
   width: 20%;
 }
-
 .bottom-nav a i {
   display: block;
   font-size: 22px;
   margin-bottom: 4px;
 }
-
 .bottom-nav a:hover {
   color: var(--highlight);
   text-shadow: 0 0 12px var(--highlight);
   transform: scale(1.05) rotate(5deg);
 }
-
 /* ACTIVE NAV ITEM */
 .nav-highlight {
   color: var(--highlight) !important;
   font-weight: bold;
   text-shadow: 0 0 14px var(--highlight);
 }
-
 .nav-active {
   background: #000 !important;
   color: var(--highlight) !important;
   border-top: 4px solid var(--highlight);
 }
-
 /* ===== MODAL OVERLAY ===== */
 .modal-overlay {
   position: fixed;
@@ -793,14 +782,11 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   padding: 20px;
   font-family: var(--typography);
   animation: fadeIn 0.6s ease-in-out;
-  box-sizing: border-box;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 /* ACTION BUTTONS */
 .signup-btn,
 .signin-btn {
@@ -818,13 +804,11 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   box-shadow: 0 0 14px rgba(0, 212, 255, 0.7);
   transition: all 0.4s ease-in-out;
 }
-
 .signup-btn:hover,
 .signin-btn:hover {
   transform: scale(1.05) rotate(2deg);
   box-shadow: 0 0 22px rgba(0, 212, 255, 1);
 }
-
 /* ===== GAME CARDS ===== */
 .game-card {
   background: linear-gradient(180deg, #0a1f2b, #1a3b52);
@@ -836,95 +820,99 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
   box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
   transition: all 0.4s ease-in-out;
   animation: cardFadeIn 0.8s ease-in-out;
-  box-sizing: border-box;
 }
-
 @keyframes cardFadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .game-card:hover {
   transform: translateY(-5px) scale(1.04) rotate(3deg);
   box-shadow: 0 0 22px rgba(0, 212, 255, 0.8);
 }
-
-/* Mobile Adjustments */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
   .sticky-top {
     padding: 10px 0;
   }
-
   .sticky-top a {
     font-size: 12px;
   }
-
   .sticky-top a i {
     font-size: 18px;
     margin-bottom: 3px;
   }
-
   .bottom-nav a {
     font-size: 12px;
   }
-
   .bottom-nav a i {
     font-size: 20px;
     margin-bottom: 2px;
   }
-
-  .modal-overlay {
-    padding: 10px;
-    align-items: flex-start;
-    overflow-y: auto;
-  }
-
   .signup-btn,
   .signin-btn {
     height: 36px;
     line-height: 36px;
     font-size: 13px;
   }
-
-  .game-row {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .game-card {
-    width: calc(50% - 6px);
-    margin-bottom: 12px;
-  }
-
   p {
     font-size: 14px;
   }
-
-  .copyright {
-    font-size: 12px;
-    margin-top: 10px;
+  .game-card {
+    padding: 8px;
+    border-width: 2px;
   }
 }
-
 @media (max-width: 480px) {
-  .game-card {
-    width: 100%;
-    margin-bottom: 10px;
+  .sticky-top {
+    justify-content: space-between;
+    padding: 8px 10px;
   }
-
-  .buttons-row {
+  .sticky-top a {
+    font-size: 10px;
+  }
+  .sticky-top a i {
+    font-size: 16px;
+  }
+  .bottom-nav {
+    padding: 6px 0;
+  }
+  .bottom-nav a {
+    font-size: 10px;
+  }
+  .bottom-nav a i {
+    font-size: 18px;
+  }
+  div[style*="display: flex; justify-content: space-between; width: 100%; gap: 12px;"] {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-
   .signup-btn,
   .signin-btn {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+  }
+  div[style*="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px;"] {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .game-card {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .game-card {
     width: 100%;
   }
 }
 </style>
 <div class="modal-overlay">
-  <div style="display: flex; flex-direction: column; align-items: center; width: 100%; padding: 0; box-sizing: border-box;">
+  <div style="display: flex; flex-direction: column; align-items: center; width: 100%; padding: 0;">
     <header>
       <div class="sticky-top">
         <a href="https://herooo369.github.io/discovery/penemuan-tumbuhan-liar-mirip-ganja.html"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjWhCqCEks47a-AnHhbF_ZvxQGQlxtV4L41-9_ZFsyEXCaLfPROB8_5KZQmdzclUDzpKUr9vEvmBJj23p4DgvnFETVSl9s9nGsDlSKqXqlP9VKbM8Cn1E-V6UP6AF7_KiGanuvSSSFc1otnG6LgHPEwAvRGLlCqjSYj5Rf70OV-3jFXH5QKu4m1Hhkr3jak" style="height: 28px;"></a>
@@ -942,14 +930,14 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
         </a>
       </div>
     </header>
-    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhHCCEobdG1Fmr_HncmEIja-aRYmCrvUUnxHreIvVmRFSToJANtaR_Kj_XHhQOPH3NATlQ3XdX4KBInhUHNGeh9bSXHzmaBM5zdCOzg_Trx9HFnu_VVlbYDA73JdQAx6vUJiBW3Q21DoY6ERAFxrj63iOGbYG_Rg6M7WXBQUVSKbLeQwUmtruJWFgaaH1TQ" style="width: 100%; border-radius: 14px; box-shadow: 0 0 14px rgba(0, 212, 255, 0); margin-bottom: 20px; border-width: 3px; border-color: #000000; border-style: solid; animation: imgFadeIn 0.6s ease-in-out; box-sizing: border-box;">
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhHCCEobdG1Fmr_HncmEIja-aRYmCrvUUnxHreIvVmRFSToJANtaR_Kj_XHhQOPH3NATlQ3XdX4KBInhUHNGeh9bSXHzmaBM5zdCOzg_Trx9HFnu_VVlbYDA73JdQAx6vUJiBW3Q21DoY6ERAFxrj63iOGbYG_Rg6M7WXBQUVSKbLeQwUmtruJWFgaaH1TQ" style="width: 100%; border-radius: 14px; box-shadow: 0 0 14px rgba(0, 212, 255, 0); margin-bottom: 20px; border-width: 3px; border-color: #000000; border-style: solid; animation: imgFadeIn 0.6s ease-in-out;">
     <style>
       @keyframes imgFadeIn {
         from { opacity: 0; transform: scale(0.95); }
         to { opacity: 1; transform: scale(1); }
       }
     </style>
-    <div class="buttons-row" style="display: flex; justify-content: space-between; width: 100%; gap: 12px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; width: 100%; gap: 12px;">
       <a href="https://t2m.io/home2" class="signup-btn"> DAFTAR </a>
       <a href="https://t2m.io/home2" class="signin-btn"> LOGIN </a>
     </div>
@@ -962,7 +950,7 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
         to { opacity: 1; transform: translateY(0); }
       }
     </style>
-    <div class="game-row" style="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px;">
       <div class="game-card" style="animation-delay: 0.1s;">
         <img src="https://ik.imagekit.io/tlymdtmk4/gpas_hom_pop.gif" style="width: 100%; margin: 0;">
       </div>
@@ -973,7 +961,7 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
         <img src="https://ik.imagekit.io/tlymdtmk4/gpas_kaching_pop.gif" style="width: 100%; margin: 0;">
       </div>
     </div>
-    <div class="game-row" style="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; width: 100%; gap: 6px; margin-bottom: 6px;">
       <div class="game-card" style="animation-delay: 0.4s;">
         <img src="https://ik.imagekit.io/tlymdtmk4/pop_001378cc_qsp.gif" style="width: 100%; margin: 0;">
       </div>
@@ -984,7 +972,7 @@ h1 {font-size:30px;font-weight:bold} h2 {font-size:24px;font-weight:bold} h3 {fo
         <img src="https://ik.imagekit.io/tlymdtmk4/gpas_mhmac_pop.gif" style="width: 100%; margin: 0;">
       </div>
     </div>
-    <div class="copyright" style="margin-top: 20px; font-size: 13px; color: #eeeeee; animation: footerFadeIn 1s ease-in-out;"> © COPYRIGHT 2026 <span style="color: #ff0000;">|</span> <strong>Hero Focus News</strong> </div>
+    <div style="margin-top: 20px; font-size: 13px; color: #eeeeee; animation: footerFadeIn 1s ease-in-out;"> © COPYRIGHT 2026 <span style="color: #ff0000;">|</span> <strong>Bandung Focus News</strong> </div>
     <style>
       @keyframes footerFadeIn {
         from { opacity: 0; }
